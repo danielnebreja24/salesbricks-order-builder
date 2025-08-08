@@ -5,7 +5,10 @@ import { useCallback, useEffect, useMemo } from "react";
 
 export default function Plans() {
   const { selectedProduct, selectedPlan, setSelectedPlan } = useOrderContext();
-  const plans = selectedProduct?.plans ?? [];
+  const plans = useMemo(
+    () => selectedProduct?.plans ?? [],
+    [selectedProduct?.plans]
+  );
 
   const updatedPlan = useMemo(
     () => plans.find((plan) => plan.id === selectedPlan?.id),

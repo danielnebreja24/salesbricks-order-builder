@@ -32,44 +32,44 @@
 #### 2.2 Folder Structure
 
 ```
-|-- docs/
-|   `-- SDD.md
-|-- public/
-|   `-- data/
-|       |-- addons.json
-|       |-- customers.json
-|       `-- products.json
-|-- src/
-|   |-- components/
-|   |   |-- customer/
-|   |   |   |-- index.tsx
+|-- docs/                     # Project documentation
+|   `-- SDD.md                # Software Design Document
+|-- public/                   # Static assets served as-is
+|   `-- data/                 # Sample JSON data
+|       |-- addons.json       # Add-ons master data
+|       |-- customers.json    # Customer master data
+|       `-- products.json     # Products & plans master data
+|-- src/                      # Application source code
+|   |-- components/           # React UI components
+|   |   |-- customer/         # Customer Info step components
+|   |   |   |-- index.tsx         # Entry for customer step
 |   |   |   `-- customer-info.tsx
-|   |   |-- product/
-|   |   |   |-- index.tsx
+|   |   |-- product/          # Product & Plan step components
+|   |   |   |-- index.tsx         # Entry for product step
 |   |   |   |-- plans.tsx
 |   |   |   `-- edit-price.tsx
-|   |   |-- review-order/
-|   |   |   |-- index.tsx
+|   |   |-- review-order/      # Review & Fine-Tune step components
+|   |   |   |-- index.tsx         # Entry for review step
 |   |   |   |-- order-summary.tsx
 |   |   |   `-- add-ons.tsx
-|   |   |-- terms  /
-|   |   |   `-- index.tsx
-|   |   `-- workflow.tsx
-|   |-- constants/
-|   |   `-- constants.ts
-|   |-- context/
-|   |   `-- order.context.ts
-|   |-- hooks/
-|   |   `-- order.hooks.ts.ts
-|   |-- interfaces/
-|   |   `-- models.ts
-|   |-- services/
-|   |   `-- order.service/ts
-|   `-- utils/
-|       |-- date.ts
-|       |-- formatter.ts
-|       `-- math.ts
-`-- App.tsx
+|   |   |-- terms/             # Contract Terms step components
+|   |   |   `-- index.tsx         # Entry for terms step
+|   |   `-- workflow.tsx       # Tab/stepper container
+|   |-- constants/            # Application constants
+|   |   `-- constants.ts      # Lists (STAGES, US_STATES, CONTRACT_PERIODS)
+|   |-- context/              # React Context providers
+|   |   `-- order.context.ts  # Order state & navigation
+|   |-- hooks/                # Custom React hooks
+|   |   `-- order.hooks.ts    # Data-loading & mutation hooks
+|   |-- interfaces/           # TypeScript type definitions
+|   |   `-- models.ts         # ICustomer, IProduct, IPlan, etc.
+|   |-- services/             # Data service abstractions
+|   |   `-- order.service.ts  # Fetching from /public/data - For ease of scaling when we implement actual backend
+|   `-- utils/                # Utility functions
+|       |-- date.ts           # Date manipulation helpers
+|       |-- formatter.ts      # Display formatting helpers
+|       `-- math.ts           # Price & total‐calculation helpers
+`-- App.tsx                   # Root application component
 ```
 
 #### 2.3 Deployment
