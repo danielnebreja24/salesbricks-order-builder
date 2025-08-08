@@ -27,9 +27,7 @@
 
 ### 2. System architecture
 
-#### 2.1
-
-#### 2.2 Folder Structure
+#### 2.1 Folder Structure
 
 ```
 |-- docs/                     # Project documentation
@@ -72,7 +70,7 @@
 `-- App.tsx                   # Root application component
 ```
 
-#### 2.3 Deployment
+#### 2.2 Deployment
 
 - **Hosting**: Deployed as a static build on Vercel
 - **Build command**: `yarn build`
