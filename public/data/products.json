@@ -1,0 +1,27 @@
+[
+  {
+    "id": "p1",
+    "name": "GreatCo's First Product",
+    "plans": [
+      { "id": "plan1", "name": "Standard", "basePrice": 100 },
+      { "id": "plan2", "name": "Premium", "basePrice": 150 }
+    ]
+  },
+  {
+    "id": "p2",
+    "name": "GreatCo's Second Product",
+    "plans": [
+      { "id": "plan3", "name": "Starter", "basePrice": 200 },
+      { "id": "plan4", "name": "Enterprise", "basePrice": 300 }
+    ]
+  },
+  {
+    "id": "p3",
+    "name": "GreatCo's Third Product",
+    "plans": [
+      { "id": "plan5", "name": "Startup", "basePrice": 250 },
+      { "id": "plan6", "name": "Traction", "basePrice": 400 },
+      { "id": "plan7", "name": "Growth", "basePrice": 600 }
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "add1",
+    "name": "Extra Support",
+    "unitPrice": 20
+  },
+  {
+    "id": "add2",
+    "name": "Analytics Module",
+    "unitPrice": 50
+  },
+  {
+    "id": "add3",
+    "name": "Training Package",
+    "unitPrice": 100
+  }
+]

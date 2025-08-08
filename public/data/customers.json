@@ -1,0 +1,29 @@
+[
+  {
+    "id": "c1",
+    "customer": "Acme Corp",
+    "address1": "123 Elm St",
+    "address2": "",
+    "city": "Springfield",
+    "state": "IL",
+    "zipCode": "62701"
+  },
+  {
+    "id": "c2",
+    "customer": "Globex Inc",
+    "address1": "456 Oak Ave",
+    "address2": "Suite 200",
+    "city": "Metropolis",
+    "state": "NY",
+    "zipCode": "10118"
+  },
+  {
+    "id": "c3",
+    "customer": "Initech",
+    "address1": "789 Maple Rd",
+    "address2": "Building A, Floor 3",
+    "city": "Silicon Valley",
+    "state": "CA",
+    "zipCode": "94025"
+  }
+]
