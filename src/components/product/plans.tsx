@@ -2,6 +2,7 @@ import { Card, Radio, Typography } from "@mui/material";
 import { useOrderContext } from "context/order.context";
 import EditPrice from "./edit-price";
 import { useCallback, useEffect, useMemo } from "react";
+import { formatCurrency } from "utils/formatter";
 
 export default function Plans() {
   const { selectedProduct, selectedPlan, setSelectedPlan } = useOrderContext();
@@ -62,7 +63,9 @@ export default function Plans() {
                   />
                 </div>
                 <div className="flex items-center gap-2">
-                  <Typography variant="h3">${basePrice}</Typography>
+                  <Typography variant="h3">
+                    {formatCurrency(basePrice)}
+                  </Typography>
                   <Typography color="text.secondary">/ mo</Typography>
                 </div>
                 <EditPrice id={id} price={basePrice} />

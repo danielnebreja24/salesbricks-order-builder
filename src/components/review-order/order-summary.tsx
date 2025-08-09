@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useOrderContext } from "context/order.context";
 import { useMemo } from "react";
+import { formatCurrency } from "utils/formatter";
 import { getTotalPrice, safeAddPrice } from "utils/math";
 
 export default function OrderSummary() {
@@ -73,10 +74,12 @@ const OrderDetails = () => {
               key={addOn.id}
               secondaryAction={
                 <Detail
-                  detail={`$${getTotalPrice({
-                    price: addOn.unitPrice,
-                    qty: addOn.quantity ?? 1,
-                  })}`}
+                  detail={`${formatCurrency(
+                    getTotalPrice({
+                      price: addOn.unitPrice,
+                      qty: addOn.quantity ?? 1,
+                    })
+                  )}`}
                 />
               }
             >
@@ -123,14 +126,15 @@ const TotalAmountDetails = () => {
     [selectedAddOns]
   );
 
+  const grandTotalPrice = useMemo(() => {
+    return safeAddPrice(totalAddOnsPrice, selectedPlan?.basePrice);
+  }, [totalAddOnsPrice, selectedPlan?.basePrice]);
+
   return (
     <ListItem
       className="mt-3"
       secondaryAction={
-        <Detail
-          detail={`$${safeAddPrice(totalAddOnsPrice, selectedPlan?.basePrice)}`}
-          variant="h5"
-        />
+        <Detail detail={formatCurrency(grandTotalPrice)} variant="h5" />
       }
     >
       <ListItemText

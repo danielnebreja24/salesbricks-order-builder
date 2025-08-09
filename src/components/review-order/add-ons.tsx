@@ -9,6 +9,7 @@ import {
 import { useOrderContext } from "context/order.context";
 import { useOrders } from "hooks/order.hooks";
 import { useCallback, useEffect, useState } from "react";
+import { formatCurrency } from "utils/formatter";
 
 interface IAddOnBaseItem {
   id: string;
@@ -87,7 +88,9 @@ export const AddOnItem = ({ addOn }: IAddOnItemProps) => {
             />
           </Box>
           <Box className="flex flex-col items-end">
-            <h1 className="text-3xl font-semibold pb-2">${unitPrice}</h1>
+            <h1 className="text-3xl font-semibold pb-2">
+              {formatCurrency(unitPrice)}
+            </h1>
             <p className="text-sm text-gray-500">per {name}</p>
           </Box>
         </Grid>
