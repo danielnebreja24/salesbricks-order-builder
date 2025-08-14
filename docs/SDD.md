@@ -286,7 +286,7 @@ interface Order {
 
 ---
 
-### 7. Quality Attributes & Edge Cases
+### 7. Possible Issues & Edge Cases
 
 | Possible risk/problem                      |                         Solution                          |
 | ------------------------------------------ | :-------------------------------------------------------: |
@@ -333,7 +333,7 @@ interface Order {
     - ADD-ONS - GET `/api/add-ons` - GET/POST `/api/add-on` - PATCH/PUT `/api/add-on/:id`
       _All endpoints return JSON_
 
-### 10 Non-Functional requirements
+### 10 Quality Attributes & Non-Functional requirements
 
 - Performance optimization
   - Lazy loading
