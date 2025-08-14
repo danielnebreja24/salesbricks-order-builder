@@ -271,14 +271,17 @@ interface Order {
 
 - Name is `required`
 - Billing address is `optional`
-  **Product & Plan**
+
+**Product & Plan**
 - Product line is `required`
 - Plan is `required`
-  **Contract Terms**
+
+**Contract Terms**
 - Start date is `required`
 - Contract Period is `required`
 - End date is `required` (auto-populated)
-  **Review**
+
+**Review**
 - Add-ons are `optional`
 
 ---
